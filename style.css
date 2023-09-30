@@ -1,0 +1,254 @@
+body {
+    background:linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ),url(bg.png);
+    background-size:cover;
+    background-position: 0 0;
+    overflow-x:hidden;
+}
+
+video {
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index:-99999;
+    object-fit: cover;
+    height:100%;
+    width:100%;
+}
+
+@keyframes text-color-change {
+	0% {
+		color: #333
+	}
+	25% {
+		color: #eee
+	}
+    75% {
+        color: #eee
+    }
+	to {
+		color: #333
+	}
+}
+
+@keyframes target-color-change {
+	0% {
+		color: #333
+	}
+    17% {
+        color: #eee
+    }
+    87% {
+        color: #eee
+    }
+    91% {
+        color: #6af
+    }
+    95% {
+        color: #eee
+    }
+	to {
+		color: #ff4444
+	}
+}
+
+@keyframes horizontal-line-clip {
+	0% {
+		-webkit-clip-path: polygon(0 0, 0 100%, 1% 100%, 1% 1%, 99% 1%, 99% 3%, 0 3%, 0 100%, 100% 100%, 100% 0);
+		clip-path: polygon(0 0, 0 100%, 1% 100%, 1% 1%, 99% 1%, 99% 3%, 0 3%, 0 100%, 100% 100%, 100% 0);
+	}
+	to {
+		-webkit-clip-path: polygon(0 0, 0 100%, 1% 100%, 1% 97%, 99% 97%, 99% 99%, 0 99%, 0 100%, 100% 100%, 100% 0);
+		clip-path: polygon(0 0, 0 100%, 1% 100%, 1% 97%, 99% 97%, 99% 99%, 0 99%, 0 100%, 100% 100%, 100% 0);
+	}
+}
+
+/* @keyframes vertical-line-clip {
+	0% {
+		-webkit-clip-path: polygon(0 0, 0 100%, 1% 100%, 1% 1%, 99% 1%, 99% 3%, 0 3%, 0 100%, 100% 100%, 100% 0);
+		clip-path: polygon(0 100%, 100% 100%, 100% 0, 3% 0, 3% 99%, 1% 99%, 1% 1%, 100% 1%, 100% 0, 0 0);
+	}
+	to {
+		-webkit-clip-path: polygon(0 0, 0 100%, 1% 100%, 1% 97%, 99% 97%, 99% 99%, 0 99%, 0 100%, 100% 100%, 100% 0);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 97% 0, 99% 99%, 97% 99%, 97% 1%, 100% 1%, 100% 0, 0 0);
+    }
+} */
+
+
+@keyframes hover-flicker {
+  0%    { transform: translate(0)    }
+  15%   { transform: translate(-2px) }
+  20%   { transform: translate(2px, 2px)  }
+  25%   { transform: translate(0px, 0px)    }
+  70%   { transform: translate(0)    }
+  75%   { transform: translate(-2px, 2px) }
+  80%   { transform: translate(2px, -2px)  }
+  85%   { transform: translate(0)    }
+} 
+
+@keyframes text-shadow-flicker-px {
+	0%   { text-shadow: -2.5px -.5px 2px blue,  1.5px 0px 5px red; }
+        19%  { text-shadow: -2.5px -.5px 1px #6af, 1.5px 0px 5px red; }
+        20%  { text-shadow: -2.5px -.5px 1px #6af, 1.5px 0px 5px red; }
+        21%  { text-shadow: -2.5px -.5px 1px #6af, 1.5px 0px 5px red; }
+        22%  { text-shadow: -2.5px -.5px 1px #6af, 1.5px 0px 5px red; }
+        50%  { text-shadow: -2.5px -.5px 0px #6af, 1.5px 0px 0px red; }
+        70%  { text-shadow: -2px -.5px 3px #6af, 1.5px 0 3px #ff4444; }
+        72%  { text-shadow: -1px -1px 1px blue, -4px 3px 1px red; }
+        73%  { text-shadow: -4px -3px 1px blue, 1px 1px 1px red; }
+        75%  { text-shadow: -2px -.5px 1px #6af, 1.5px 0 1px #ff4444; }
+        80%  { text-shadow: -2.5px 0 1px blue, 1.5px .5px 5.5px #ff4444; }
+	100% { text-shadow: -2.5px 0 1px blue, 1.5px .5px 5.5px red; }
+}
+
+@keyframes text-shadow-flicker-rem {
+	0%   { text-shadow: -.25rem -.15rem .2rem blue,  .15rem 0rem .5rem red; }
+        19%  { text-shadow: -.25rem -.15rem .2rem #6af, .15rem 0rem .5rem red; }
+        20%  { text-shadow: -.25rem -.15rem .2rem #6af, .15rem 0rem .5rem red; }
+        21%  { text-shadow: -.25rem -.15rem .2rem #6af, .15rem 0rem .5rem red; }
+        22%  { text-shadow: -.25rem -.15rem .2rem #6af, .15rem 0rem .5rem red; }
+        50%  { text-shadow: -.25rem -.15rem 0rem #6af, .15rem 0rem 0rem red; }
+        70%  { text-shadow: -.2rem -.25rem .3rem #6af, .15rem 0 .3rem #ff4444; }
+        72%  { text-shadow: .2rem .3rem .1rem blue, -.4rem -.3rem .1rem red; }
+        73%  { text-shadow: -.4rem -.3rem .1rem blue, .1rem .1rem .1rem red; }
+        75%  { text-shadow: -.2rem -.5rem .1rem #6af, .15rem 0 .1rem #ff4444; }
+        80%  { text-shadow: -.25rem 0 .1rem blue, .15rem .5rem .55rem #ff4444; }
+        90%  { text-shadow: -.25rem 0 .1rem blue, -.25rem .25rem .35rem #ff4444;}
+	    95% { text-shadow: -.25rem -.25rem .3rem blue, .15rem .25rem .55rem red; }
+        100% {text-shadow: -5rem -.25rem .1rem blue, 5rem .25rem .1rem #ff4444;}
+}
+
+.pagename {
+    display: block;
+    width: 0px !important;
+    visibility: hidden;
+}
+
+.pagename a:after {
+    visibility: visible;
+}
+
+.pagename a:before {
+    visibility: visible;
+}
+
+.pagename a::before{
+    font-family: 'Audiowide', sans-serif;
+    left: -5rem;
+    content: "T◢GPR";
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100vw;
+    margin: 0 auto;
+    top: 60px;
+    font-size:12rem;
+    animation: text-color-change 5s alternate infinite, text-shadow-flicker-rem 8s alternate infinite, horizontal-line-clip 12s alternate infinite; 
+    transition: all .06s ease-in;
+    z-index: 1
+}
+/*Can also use ⯐⛶⛞◰◈❖⬗⯁⬣⬢⬡◔✪❂ for the O in TagPro, like T◢GPR⯐ */
+.pagename a::after{
+    font-family: 'Audiowide', sans-serif;
+    /* use bold if ur gonna use the ⛶ thing */
+    font-weight: bold;
+    left: 24.25rem;
+    content: "⛶";
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100vw;
+    margin: 0 auto;
+    top: 60px;
+    font-size:12rem;
+    animation: target-color-change 7s alternate infinite, text-shadow-flicker-rem 8s alternate infinite, horizontal-line-clip 12s alternate infinite; 
+    transition: all .06s ease-in;
+    z-index: 1
+}
+    
+.pagename a:hover::after { animation: target-color-change 3s alternate infinite, text-shadow-flicker-rem 6s alternate infinite, horizontal-line-clip 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;}
+.pagename a:hover::before { animation: text-color-change 3s alternate infinite, text-shadow-flicker-rem 6s alternate infinite, horizontal-line-clip 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom:3rem;
+    margin-top:16rem;
+    font-style:italic;
+}
+
+h2:hover {
+    cursor:pointer;
+    animation:text-color-change 3s alternate infinite, text-shadow-flicker-rem 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;
+}
+
+h3 {
+    margin-bottom:1rem;
+    font-family: "Michroma", sans-serif;
+    margin:.5rem;
+    transition: .25s ease-in-out;
+}
+
+h3:hover {
+    cursor: pointer;
+    animation: text-shadow-flicker-px 3s alternate infinite;
+    margin-left:1rem;
+    margin-right:1rem;
+    transition: .25s ease-in-out;
+}
+
+.bg-switch {
+    position:absolute;
+    top:1rem;
+    left:1rem;
+    z-index:99;
+}
+
+.font-switch {
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+    z-index:99;
+}
+
+.caps-switch {
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    z-index:99;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Michroma', sans-serif;    
+    cursor:pointer;
+    width: 2.5rem;
+    height: 1.5rem;
+    background: white;
+    transition: .25s ease;
+}
+
+.caps-switch:hover {
+    background: #aaa;
+    transition: .25s ease;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:800px){
+    body {
+        background-position: 50% 10%;
+        background-size:200vh
+    }
+    .pagename a::before{
+        font-size:5rem;
+        left: -2rem;
+    }
+    .pagename a::after{
+        font-size:5rem;
+        left: 10.25rem
+    }
+    h2{
+        margin-top:9rem;
+    }
+}
+
