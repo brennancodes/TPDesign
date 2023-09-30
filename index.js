@@ -28,7 +28,7 @@ $('#Background').on('change',function(){
         if ($(this).val() == "bg3.jpg"){
             document.body.style.background = 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(bg3.jpg)';
             $('body').css({
-                "background-position":"0 -30rem",
+                "background-position":"0 -50rem",
                 "background-size":"cover"
             })
         }

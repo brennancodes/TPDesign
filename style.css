@@ -165,8 +165,8 @@ video {
     z-index: 1
 }
     
-.pagename a:hover::after { animation: target-color-change 3s alternate infinite, text-shadow-flicker-rem 6s alternate infinite, horizontal-line-clip 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;}
-.pagename a:hover::before { animation: text-color-change 3s alternate infinite, text-shadow-flicker-rem 6s alternate infinite, horizontal-line-clip 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;}
+/* .pagename a:hover::after { animation: target-color-change 3s alternate infinite, text-shadow-flicker-rem 6s alternate infinite, horizontal-line-clip 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;}
+.pagename a:hover::before { animation: text-color-change 3s alternate infinite, text-shadow-flicker-rem 6s alternate infinite, horizontal-line-clip 5s alternate infinite, hover-flicker 1s alternate infinite; transition: all .06s ease-in;} */
 
 h2 {
     font-size: 4rem;
